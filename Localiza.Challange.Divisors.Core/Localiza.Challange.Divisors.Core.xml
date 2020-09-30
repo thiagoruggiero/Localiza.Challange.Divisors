@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Localiza.Challange.Divisors.Core</name>
+    </assembly>
+    <members>
+        <member name="M:Localiza.Challange.Divisors.Core.Controllers.DivisorsController.GetDivisors(System.Int32)">
+            <summary>
+            Endpoint criado para reutilização de outras aplicações
+            </summary>
+            <param name="number"></param>
+            <returns>Retorna lista de divisores e lista de  divisores primos</returns>
+        </member>
+    </members>
+</doc>

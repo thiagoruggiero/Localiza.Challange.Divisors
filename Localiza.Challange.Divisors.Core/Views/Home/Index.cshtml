@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+}
+@model NumberModel
+
+<div class="text-center">
+
+    @using (Html.BeginForm("Calculate", "Home"))
+    {
+        @Html.TextBoxFor(m => m.Number)
+
+        <button type="submit">Calcular</button>
+
+    }
+</div>
+<br />
+<br />
+<br />
+
+<div class="text-center">
+    @if (Model.Divisors.AllDivisors.Count > 0)
+    {
+        <label>Todos os Divisores</label>
+        <table align="center">
+            @foreach (var item in Model.Divisors.AllDivisors)
+            {
+                <tr>
+                    <td>
+                        @item
+                    </td>
+                </tr>
+            }
+        </table>
+
+    }
+
+
+    @if (Model.Divisors.PrimeDivisors.Count > 0)
+    {
+        <label>Divisores Primos</label>
+        <table align="center">
+            @foreach (var item in Model.Divisors.PrimeDivisors)
+            {
+                <tr>
+                    <td>
+                        @item
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+</div>
+
+
+
+
+
+
